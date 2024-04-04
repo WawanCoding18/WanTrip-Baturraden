@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .row-messages {
+        display: flex;
+        flex-direction: row;
+        font-size: 50px;
+        padding-top: 20px;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+      }
+
+      .row-messages h1 {
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .row-messages h1:hover {
+        color: orangered;
+      }
+
+      .row-messages h1:after {
+        content: '';
+        display: block;
+        border-bottom: 2px solid orangered;
+        padding-bottom: 5px;
+        transition: 0.1s linear;
+        transform: scaleX(0);
+      }
+
+      .row-messages h1:hover::after {
+        transform: scaleX(0.5);
+      }
+
+      .active {
+        border: 1px solid black;
+        padding: 30px;
+        width: 400px;
+        height: 700px;
+        margin-top: 40px;
+        border-radius: 30px;
+      }
+
+      .active h1 {
+        font-size: 25px;
+        text-align: left;
+      }
+
+      .active-user {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        justify-content: space-between;
+        overflow-x: auto; /* Changed to 'auto' for horizontal scroll */
+        width: 100%; /* Changed to 100% for full width */
+        padding: 0 20px; /* Added padding for better spacing */
+      }
+
+      .img-user {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 1px solid black;
+      }
+
+      .logo-user {
+        width: 20px;
+        height: 20px;
+        margin-top: 60px;
+        right: 7%;
+        position: relative;
+      }
+
+      #arrow-left-circle,
+      #arrow-right-circle {
+        cursor: pointer;
+        position: relative;
+        right: 20px;
+        bottom: -80px;
+      }
+
+      #arrow-left-circle:hover,
+      #arrow-right-circle:hover {
+        color: orangered;
+      }
+
+      .search1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        left: 5%;
+      }
+
+      .search1 input {
+        border: 1px solid orangered;
+        border-radius: 10px;
+        padding: 10px 20px;
+      }
+
+      .search1 button {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      .search1 img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .row-active {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 350px;
+      }
+
+      .card-user {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+        margin-right: 30px;
+      }
+
+      .pp-user {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-right: 10px;
+      }
+
+      .card-user p {
+        margin: 0;
+        font-size: 20px;
+      }
+
+      .logo-user2 {
+        width: 10px;
+        height: 10px;
+        margin-left: 10px;
+      }
+
+      .card-user:hover {
+        background-color: rgb(255, 153, 117);
+        border-radius: 30px;
+      }
+
+      .chat-area {
+        border: 1px solid black;
+        padding: 30px;
+        width: calc(100% - 430px); /* Adjusted width */
+        margin-top: 40px;
+        border-radius: 30px;
+        top: -710px;
+        height: 700px;
+      }
+
+      .iconChat-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px; /* Added margin for spacing */
+      }
+
+      .iconChat-area img {
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-right: 490px; /* Adjusted margin for spacing */
+        cursor: pointer;
+      }
+
+      .iconChat-area i {
+        color: orangered;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .type-chat {
+        border: 2px solid orangered;
+        border-radius: 20px;
+        padding: 5px;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .type-chat input {
+        left: 5px;
+        position: relative;
+      }
+
+      .iconLink {
+        cursor: pointer;
+      }
+
+      .iconSend {
+        cursor: pointer;
+        background-color: orangered;
+        color: white;
+        border-radius: 50%;
+        padding: 6px;
+      }
+
+      .smile {
+        cursor: pointer;
+      }
+
+      .chat-comment {
+        overflow-y: auto;
+        max-height: 550px;
+      }
+
+      .chat-comment::-webkit-scrollbar {
+        display: none;
+      }
+
+      #ListChat li {
+        background-color: rgb(240, 237, 237);
+        text-align: left;
+        width: 300px;
+        margin-left: auto; /* Centering the chat messages */
+        margin-right: 0; /* Centering the chat messages */
+        border-radius: 30px;
+        word-wrap: break-word;
+      }
+
+      #ListChat img {
+        background-color: rgb(240, 237, 237);
+        padding: 10px;
+        text-align: left;
+        margin-top: 20px;
+        border-radius: 30px;
+      }
+
+      #fileInput1 {
+        display: none;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

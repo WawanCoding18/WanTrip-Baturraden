@@ -1,0 +1,1378 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: rgb(224, 217, 210);
+}
+
+.change-color {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  z-index: 9999;
+  display: none;
+}
+.change-color1 {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  z-index: 9999;
+  display: none;
+}
+
+.navbar {
+  background-color: white;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  position: fixed;
+  right: 85%;
+  bottom: 76%;
+  padding: 0;
+}
+
+.logo img.wantrip {
+  width: 200px;
+  height: 200px;
+}
+
+/* Aturan lain yang mungkin mempengaruhi ukuran elemen */
+.logo img {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: absolute;
+  left: 53%;
+}
+
+.search input {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid orangered;
+}
+
+.search button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.search img {
+  width: 20px;
+  height: 20px;
+}
+
+.icon {
+  margin-left: 70%;
+  margin-bottom: 20px;
+}
+
+.icon .fa-solid {
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 40px;
+  border: 1px solid black;
+}
+
+.profile {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  cursor: pointer;
+}
+
+.dark {
+  border: 1px solid black;
+  border-radius: 30px;
+  margin-right: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.text-dark {
+  text-align: center;
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+#moon {
+  border: 1px solid black;
+  background-color: rgb(220, 192, 101);
+  border-radius: 50%;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.store {
+  color: black;
+  display: inline-block;
+}
+.store:hover {
+  color: orangered;
+  display: inline-block;
+}
+
+.bulat {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  position: fixed;
+  right: 150px;
+  text-align: center;
+  top: 20px;
+  display: none;
+}
+
+.kosong{
+  text-align: center;
+  font-weight: 600;
+}
+
+.vacation-item,
+.vacation-item1 {
+  display: none;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+.vacation-itemRow,
+.vacation-itemRow1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.vacation-itemRow img,
+.vacation-itemRow1 img {
+  width: 100px;
+  height: 100px;
+}
+
+.vacation-itemRow h1,
+.vacation-itemRow1 h1 {
+  font-size: 15px;
+}
+
+.vacation-itemRow .logout,
+.vacation-itemRow1 .logout1 {
+  cursor: pointer;
+  right: -10%;
+  font-size: 20px;
+  position: relative;
+}
+
+.vacation-itemRow .logout:hover,
+.vacation-itemRow1 .logout1:hover {
+  color: orangered;
+}
+
+.all,
+.all1 {
+  text-align: center;
+  position: relative;
+  top: 50px;
+  left: -100px;
+  font-weight: 500;
+}
+
+.active {
+  background-color: rgb(255, 255, 255);
+  /* Bayangan di sisi kanan, atas, dan bawah */
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3), 0 -2px 3px rgba(0, 0, 0, 0.3), 0 2px 3px rgba(66, 66, 66, 0.3);
+
+  right: 0;
+  height: 600px;
+  width: 300px;
+  position: absolute;
+  display: none;
+  z-index: -1000;
+  top: 90px;
+}
+
+.form-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px dashed black;
+  margin-top: 1rem;
+  padding: 1rem;
+  display: none;
+}
+
+.form-container h5{
+  text-align: center;
+  font-size: 1rem;
+}
+
+.form-container form{
+   width: 100%;
+   text-align: center;
+}
+
+.form-container label{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: 1rem 0;
+}
+
+.form-container span{
+  text-align: right;
+}
+
+.form-container input{
+  background-color: #ddd;
+  padding: 5px;
+  font-size: 1rem;
+  width: 70%;
+}
+
+.form-container .checkout-button{
+  padding: 6px 14px;
+  background-color: orangered;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  margin: 1rem auto;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+
+.Dashboard {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  position: fixed;
+  margin-top: 8%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+
+ul {
+  padding-bottom: 170px;
+}
+
+ul li {
+  list-style: none;
+  text-align: left;
+  font-size: 18px;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  padding-left: 30px;
+  margin-top: 20px;
+}
+
+li .fa-solid {
+  padding-right: 10px;
+}
+
+h1 {
+  font-size: 20px;
+  cursor: default;
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+li {
+  cursor: pointer;
+}
+
+.orangemuda {
+  background-color: orangered;
+  color: white;
+  border-radius: 20px;
+}
+
+.content {
+  background-color: rgb(255, 255, 255);
+  height: 520px;
+  width: 81%;
+  display: block;
+  margin-left: 17%;
+  margin-top: 8%;
+  border-radius: 30px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.progress1 {
+  display: block;
+}
+
+.row-profile {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  padding-top: 20px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.row-profile h1 {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.row-profile h1:hover {
+  color: orangered;
+}
+
+.row-profile h1:after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid orangered;
+  padding-bottom: 5px;
+  transition: 0.1s linear;
+  transform: scaleX(0);
+}
+
+.row-profile h1:hover::after {
+  transform: scaleX(0.5);
+}
+
+#icon-face,
+#icon-social,
+#icon-shield,
+#icon-wallets {
+  margin-right: 5px;
+}
+
+.img-profile {
+  border-radius: 50%;
+  border: 3px solid orangered;
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+}
+
+.profile1 {
+  margin-right: 70%;
+}
+
+#fileInput {
+  margin-right: 20px;
+  display: none;
+}
+
+#chooseBtn {
+  background-color: orangered;
+  border-radius: 50%;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.camera {
+  margin-right: 60%;
+  margin-top: -50px;
+}
+
+.form-profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.row-email {
+  position: fixed;
+  top: 30%;
+  left: 40%;
+}
+
+.grup input {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 20px;
+  width: 600px;
+}
+.grup textarea {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 20px;
+  width: 600px;
+  overflow-y: hidden;
+}
+
+#grup-about {
+  height: 100px;
+  padding-bottom: 60px;
+}
+
+.submit button {
+  background-color: orangered;
+  border: 1px solid orangered;
+  border-radius: 20px;
+  color: white;
+  padding: 15px;
+  margin-left: 30px;
+  bottom: 8px;
+  position: relative;
+  cursor: pointer;
+}
+
+.social-progress {
+  display: none;
+}
+
+.social-progress h1,
+.shield-progress h1 {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#social-link,
+#shield-link {
+  margin-right: 10px;
+  color: orangered;
+}
+
+.social-progress .grup,
+.shield-progress .grup {
+  margin-left: 24%;
+  margin-top: 30px;
+}
+
+.submit-social button {
+  margin-top: 5px;
+  margin-left: 25%;
+  cursor: pointer;
+  background-color: orangered;
+  border: 1px solid orangered;
+  border-radius: 20px;
+  color: white;
+  padding: 15px;
+}
+
+.shield-progress {
+  display: none;
+  font-size: 20px;
+}
+
+.shield-progress .authentication {
+  font-size: 13px;
+  text-align: left;
+  margin-left: 250px;
+  margin-top: 20px;
+}
+
+.submit-shield button {
+  margin-top: 10px;
+  margin-left: 25%;
+  cursor: pointer;
+  background-color: orangered;
+  border: 1px solid orangered;
+  border-radius: 20px;
+  color: white;
+  padding: 15px;
+}
+
+.progress2 {
+  display: none;
+}
+
+.tittle-trip {
+  font-size: 20px;
+  margin-top: 20px;
+  color: orangered;
+}
+
+.card-trip {
+  display: flex;
+  border-radius: 20px;
+  margin: 30px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.img-gallery {
+  flex: 1;
+  display: flex;
+}
+
+.img-trip {
+  width: 300px;
+  height: 100%;
+  bottom: 0;
+  border-radius: 20px;
+}
+
+.trip-details {
+  padding-left: 10px;
+}
+
+.trip-details > h1,
+.trip-details > p {
+  margin-top: 10px;
+}
+
+.days-price {
+  display: flex;
+}
+
+.days,
+.price {
+  font-size: 20px;
+  margin-top: 10px;
+  margin: 10px;
+}
+
+.submit-trip button,
+.submit-trip1 button {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: orangered;
+  border: 1px solid orangered;
+  border-radius: 10px;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.submit-trip button:hover {
+  background-color: rgb(188, 57, 9);
+}
+.submit-trip1 button:hover {
+  background-color: rgb(188, 57, 9);
+}
+
+.load-more button {
+  margin-top: 10px;
+  margin-left: 40%;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid orangered;
+  color: orangered;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.load-more button:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.new-slide {
+  display: none;
+}
+
+#box-trip1 {
+  display: none;
+  position: fixed;
+  background-color: white;
+  width: 700px;
+  height: 500px;
+  border: 1px solid black;
+  border-radius: 20px;
+  left: 30%;
+  top: 57%; /* Posisikan elemen pada tengah vertikal */
+  transform: translateY(-50%); /* Koreksi agar bagian atas elemen berada di tengah vertikal */
+}
+#box-trip2 {
+  display: none;
+  position: fixed;
+  background-color: white;
+  width: 700px;
+  height: 500px;
+  border: 1px solid black;
+  border-radius: 20px;
+  left: 30%;
+  top: 57%; /* Posisikan elemen pada tengah vertikal */
+  transform: translateY(-50%); /* Koreksi agar bagian atas elemen berada di tengah vertikal */
+}
+
+.row-boxTrip,
+.row-boxTrip1 {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  padding-top: 20px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.row-boxTrip h1,
+.row-boxTrip1 h1 {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.row-boxTrip h1:hover,
+.row-boxTrip1 h1:hover {
+  color: orangered;
+}
+
+.row-boxTrip h1:after,
+.row-boxTrip1 h1:after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid orangered;
+  padding-bottom: 5px;
+  transition: 0.1s linear;
+  transform: scaleX(0);
+}
+
+.row-boxTrip h1:hover::after,
+.row-boxTrip1 h1:hover::after {
+  transform: scaleX(0.5);
+}
+
+.row-boxTrip .remove,
+.row-boxTrip1 .hapus {
+  margin-left: 30%;
+  font-size: 20px;
+}
+
+.BoxTrip-about,
+.BoxTrip-about1 {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.BoxTrip-about p .BoxTrip-about1 p {
+  margin-left: -10px;
+  font-size: 20px;
+}
+
+.BuyTicket,
+.BuyTicket1 {
+  margin-top: 20px;
+}
+
+.BuyTicket p,
+.BuyTicket1 p {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 30px;
+}
+
+.item-price {
+  margin-left: 30px;
+}
+
+.item-price #remove,
+#add,
+#remove1,
+#add1 {
+  background-color: orangered;
+  height: 20px;
+  width: 20px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.item-price #remove2,
+#add2,
+#remove12,
+#add12 {
+  background-color: orangered;
+  height: 20px;
+  width: 20px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.Button-trip button,
+.Button-trip1 button {
+  margin-top: 50px;
+  margin-left: 37%;
+  cursor: pointer;
+  background-color: orangered;
+  border: 1px solid orangered;
+  border-radius: 20px;
+  color: white;
+  padding: 20px;
+  font-weight: 600;
+  position: relative;
+  width: 150px;
+  font-size: 20px;
+}
+
+.Button-trip button:hover,
+.Button-trip1 button:hover {
+  background-color: rgb(188, 57, 9);
+}
+
+.fa-ticket,
+.fa-flag,
+.fa-book {
+  margin-right: 20px;
+  color: orangered;
+}
+
+.progress3 {
+  font-size: 50px;
+  display: none;
+}
+
+.row-follow {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  padding-top: 20px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.row-follow h1 {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.row-follow h1:hover {
+  color: orangered;
+}
+
+.row-follow h1:after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid orangered;
+  padding-bottom: 5px;
+  transition: 0.1s linear;
+  transform: scaleX(0);
+}
+
+.row-follow h1:hover::after {
+  transform: scaleX(0.5);
+}
+
+.card {
+  width: 100%;
+  padding: 80px;
+  height: 80px;
+  margin-top: 20px;
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+}
+
+.card:hover {
+  background-color: aliceblue;
+}
+
+.card-follow {
+  float: left;
+  margin: 0 10px 0 -60px;
+  bottom: 70px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: relative;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card .nama {
+  text-align: left;
+  font-size: 20px;
+}
+
+.card .kategori {
+  margin-left: 20px;
+  font-size: 16px;
+  text-align: left;
+  color: orangered;
+}
+
+.card .close button {
+  position: relative;
+  margin-left: 80%;
+  bottom: 70px;
+  cursor: pointer;
+  background-color: orangered;
+  border: 1px solid orangered;
+  border-radius: 10px;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.card .close1 button {
+  position: relative;
+  margin-left: 90%;
+  top: -150px;
+  cursor: pointer;
+  background-color: rgb(211, 211, 218);
+  border: 1px solid rgb(211, 211, 218);
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.card .close2 button {
+  position: relative;
+  margin-left: 90%;
+  top: -150px;
+  cursor: pointer;
+  background-color: orangered;
+  border-radius: 10px;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.card .close button:hover {
+  background-color: red;
+}
+.card .close1 button:hover {
+  background-color: rgb(164, 164, 170);
+}
+.card .close2 button:hover {
+  background-color: red;
+}
+
+.row-card1 {
+  display: none;
+}
+
+.load-more1 button {
+  margin-top: 10px;
+  margin-left: 25%;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid orangered;
+  color: orangered;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.load-more2 button {
+  margin-top: 10px;
+  margin-left: -5%;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid orangered;
+  color: orangered;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.load-more1 button:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.load-more2 button:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.new-slide1 {
+  display: none;
+}
+
+.progress4 {
+  display: none;
+}
+
+.row-wallet {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  padding-top: 20px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.row-wallet h1 {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.row-wallet h1:hover {
+  color: orangered;
+}
+
+.row-wallet h1:after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid orangered;
+  padding-bottom: 5px;
+  transition: 0.1s linear;
+  transform: scaleX(0);
+}
+
+.row-wallet h1:hover::after {
+  transform: scaleX(0.5);
+}
+
+.money {
+  background-color: rgb(255, 234, 227);
+  border-radius: 30px;
+  margin-top: 30px;
+  padding: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.money h2 {
+  margin-bottom: 20px;
+}
+
+.money h3 {
+  font-size: 30px;
+}
+
+.money h3 span {
+  color: orangered;
+}
+
+.ket-money {
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 50px;
+  font-style: bold;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.payment-part1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.payment1 {
+  border-radius: 20px;
+  margin-right: 20px;
+  padding: 40px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment1 img {
+  width: 60px;
+  height: 30px;
+  margin-left: 5px;
+}
+
+.payment1 h3 {
+  font-size: 20px;
+  padding-left: 5px;
+  text-align: left;
+  padding-top: 15px;
+}
+
+.payment1 h3 span {
+  color: orangered;
+}
+
+.payment1 p {
+  font-size: 15px;
+  padding-top: 10px;
+  color: gray;
+}
+
+.payment-part2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.fa-circle {
+  position: relative;
+  left: 70%;
+  bottom: 35%;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.orange {
+  background-color: orangered;
+}
+
+.progress5 {
+  display: none;
+}
+
+.row-messages {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  padding-top: 20px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.row-messages h1 {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.row-messages h1:hover {
+  color: orangered;
+}
+
+.row-messages h1:after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid orangered;
+  padding-bottom: 5px;
+  transition: 0.1s linear;
+  transform: scaleX(0);
+}
+
+.row-messages h1:hover::after {
+  transform: scaleX(0.5);
+}
+
+.progress5 {
+  display: none;
+}
+
+.row-messages {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  padding-top: 20px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.row-messages h1 {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.row-messages h1:hover {
+  color: orangered;
+}
+
+.row-messages h1:after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid orangered;
+  padding-bottom: 5px;
+  transition: 0.1s linear;
+  transform: scaleX(0);
+}
+
+.row-messages h1:hover::after {
+  transform: scaleX(0.5);
+}
+
+.account {
+  border: 1px solid black;
+  padding: 30px;
+  width: 400px;
+  height: 700px;
+  margin-top: 40px;
+  border-radius: 30px;
+}
+
+.account h1 {
+  font-size: 25px;
+  text-align: left;
+}
+
+.account-user {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: space-between;
+  overflow-x: hidden;
+  width: 90%;
+  margin-left: 20px;
+}
+
+.img-user {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.logo-user {
+  width: 20px;
+  height: 20px;
+  margin-top: 60px;
+  right: 7%;
+  position: relative;
+}
+
+#arrow-left-circle {
+  position: relative;
+  right: 20px;
+  bottom: -80px;
+}
+
+#arrow-right-circle {
+  position: relative;
+  right: -100%;
+  bottom: 50px;
+}
+
+#arrow-left-circle:hover,
+#arrow-right-circle:hover {
+  color: orangered;
+  cursor: pointer;
+}
+
+.search1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 5%;
+  margin-top: 20px;
+}
+
+.search1 input {
+  border: 1px solid orangered;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.search1 button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.search1 img {
+  width: 20px;
+  height: 20px;
+}
+
+.row-account {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 350px;
+}
+
+.card-user {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  margin-right: 30px;
+}
+
+.pp-user {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+.card-user p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.logo-user2 {
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+}
+
+.card-user:hover {
+  background-color: rgb(255, 153, 117);
+  border-radius: 30px;
+}
+
+.chat-area {
+  border: 1px solid black;
+  padding: 30px;
+  width: 670px;
+  margin-top: 40px;
+  border-radius: 30px;
+  left: 120%;
+  position: relative;
+  top: -710px;
+  height: 700px;
+}
+
+.iconChat-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.iconChat-area img {
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 490px;
+  position: relative;
+  cursor: pointer;
+}
+
+.iconChat-area i {
+  color: orangered;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.logo-user3 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.type-chat {
+  border: 2px solid orangered;
+  border-radius: 20px;
+  padding: 5px;
+  position: absolute;
+  top: 640px;
+  display: flex;
+  flex-direction: row;
+}
+
+.type-chat input {
+  left: 5px;
+  position: relative;
+}
+
+.iconLink {
+  left: 340px;
+  position: relative;
+  top: 8px;
+  cursor: pointer;
+}
+.iconSend {
+  margin-left: 350px;
+  cursor: pointer;
+  background-color: orangered;
+  color: white;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.smile {
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+}
+
+.chat-comment {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 550px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.chat-comment::-webkit-scrollbar {
+  display: none;
+}
+
+#ListChat li {
+  background-color: rgb(240, 237, 237);
+  text-align: left;
+  width: 300px;
+  margin-left: 300px;
+  border-radius: 30px;
+  word-wrap: break-word;
+}
+
+#ListChat img {
+  background-color: rgb(240, 237, 237);
+  padding: 10px;
+  text-align: left;
+  margin-top: 20px;
+  border-radius: 30px;
+}
+
+#fileInput1 {
+  display: none;
+}

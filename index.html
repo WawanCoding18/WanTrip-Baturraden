@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanTrip</title>
+
+    <link rel="icon" href="img/WanTrip-removebg-preview.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+  <link rel = "stylesheet" href="adminpage.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+<body>
+
+    
+   <!--Kontainer-->
+<div class="container">
+
+        <!--navbar -->
+    <div class="navbar">
+        
+        <div class="logo">
+            <img src="img/WanTrip-removebg-preview.png" alt="Wantrip" class="wantrip">
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="search" spellcheck="false">
+            <button><img src="img/search.png" alt=""></button>
+        </div>
+
+        <div class="icon">
+            <button class="dark"><i class="fa-regular fa-moon" id="moon"></i><kbd class="text-dark">Dark</kbd></button>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-store store" id="Store"></i>
+            <div class="bulat">1</div>
+            <img src="img/Dzakwan portofolio 1.png" alt="" class="profile" id="mainProfile">
+        </div>
+
+        <div class="active">
+
+               <!--Empty-->
+               <div class="kosong">
+                 <h1>--Kosong--</h1>
+               </div>
+                
+            <!--barang trip yang sudah ada di dalam keranjang-->
+            <div class="vacation-item">
+                <div class="vacation-itemRow">
+                   <img src="img/Trip-Baturrade1.jpg" alt="">
+                   <h1>Kebun Raya Baturraden</h1>
+                   <p class="logout">x</p>
+                   <p class="all"></p>
+                </div>
+             </div>
+
+             
+            <!--barang trip yang sudah ada di dalam keranjang-->
+            <div class="vacation-item1">
+                <div class="vacation-itemRow1">
+                   <img src="img/baturraden.jpeg" alt="">
+                   <h1>Baturraden</h1>
+                   <p class="logout1">x</p>
+                   <p class="all1">total: 20000</p>
+                </div>
+            </div>
+            
+              
+            <!--Forum checkout-->
+            <div class="form-container">
+
+                <form action="" id="checkoutForum">
+                  <h5>Customer Detail</h5>
+          
+                 <label for="name">
+                  <span>Name</span>
+                  <input type="text" name="name" id="name"></input>
+                 </label>
+          
+              
+                 <label for="email">
+                  <span>Email</span>
+                  <input type="email" name="email"></input>
+                 </label>
+              
+                 <label for="phone">
+                  <span>Phone</span>
+                  <input type="number" name="phone" id="phone"></input>
+                 </label>
+          
+                 <button class="checkout-button" type="submit" id="checkout-button" value="checkout">Checkout</button>
+                 
+                </form>
+            </div>
+            </div>
+        </div>
+
+    </div>
+    
+           <!--Kontent Dasboard-->
+    <div class="Dashboard">
+       
+        <h1>Dashboad:</h1>
+        <ul>
+            <li id="li1">
+                <p><i class="fa-solid fa-house"></i>General</p>
+            </li>
+
+            <li id="li2">
+                <p><i class="fa-solid fa-window-restore"></i>Stories</p>
+            </li>
+
+            <li id="li3">
+                <p><i class="fa-solid fa-user-group"></i>Community</p>
+            </li>
+
+            <li id="li4">
+                <p><i class="fa-solid fa-wallet"></i>Wallets</p>
+            </li>
+
+            <li id="li5">
+                <p><i class="fa-solid fa-message"></i>Messages</p>
+            </li>
+
+        </ul>
+    </div>
+     
+    <!--Kontent-->
+    <div class="content">
+
+          <!--Kontent profile-->
+        <div class="progress1">
+
+      <!--Kontent profile navbar-->
+          <div class="row-profile">
+            <h1 class="user"><i class="fa-regular fa-user" id="icon-face"></i>Profile</h1>
+
+            <h1 class="social"><i class="fa-solid fa-hashtag" id="icon-social"></i>Social</h1>
+
+            <h1 class="security"><i class="fa-solid fa-shield-halved" id="icon-shield"></i>Security</h1>
+          </div>
+
+            <!--social-->
+          <div class="social-progress">
+            <h1><i class="fa-solid fa-link" id="social-link"></i>Social Links</h1>
+            
+            <div class="grup">
+                <input type="text" placeholder="Youtube" spellcheck="false" class="grup1" id="link" required>
+            </div>
+
+            <div class="grup">
+                <input type="text" placeholder="Facebook" spellcheck="false" class="grup2" id="link1" required>
+            </div>
+
+            <div class="grup">
+                <input type="text" placeholder="Instagram" spellcheck="false" id="link2">
+            </div>
+
+            <div class="grup">
+                <input type="text" placeholder="TikTok" spellcheck="false" id="link3" required>
+            </div>
+
+            <div class="submit-social">
+                <button>Submit</button>
+              </div>
+
+
+
+         </div>
+
+         <!--security-->
+         <div class="shield-progress">
+            <h1><i class="fa-solid fa-shield-halved" id="shield-link"></i>Security</h1>
+
+                
+            <div class="grup">
+                <input type="password" placeholder="Current Password" spellcheck="false" class="grup1" id="key" required>
+            </div>
+
+            <div class="grup">
+                <input type="password" placeholder="New Password" spellcheck="false" class="grup2" id="key1" required>
+            </div>
+
+            <div class="grup">
+                <input type="password" placeholder="Confirm Password" spellcheck="false" id="key2" required>
+            </div>
+
+            <div class="authentication">
+                <h3>Two-factor authentication</h3>
+                <p>Recommended. We will send an authentication code via SMS, email, or WanTrip </br> notification when using unrecognized device or browser to log in.</p>
+            </div>
+
+
+            <div class="submit-shield">
+                <button>Submit</button>
+              </div>
+
+         </div>
+
+            <!--profile-->
+         <div class="profile-progress">
+
+          <div class="form-profile">
+
+            <div class="profile1">
+                <img id="profileImage" src="img/Dzakwan portofolio 1.png" alt="Profile Image"  class="img-profile">
+            </div>
+
+           <div class="camera">
+            <input type="file" id="fileInput">
+            <i class="fa-solid fa-camera" id="chooseBtn"></i>
+           </div>
+          
+           
+         <div class="row-email">
+
+            <div class="grup">
+                <input type="text" placeholder="Username"  spellcheck="false" class="grup1" id="username"  required>
+            </div>
+
+            <div class="grup">
+                <input type="text" placeholder="Name" spellcheck="false" class="grup2" id="name1"  required>
+            </div>
+
+            <div class="grup">
+                <input type="email" placeholder="Email" spellcheck="false" id="email"  required>
+            </div>
+
+            <div class="grup">
+                <textarea type="text"  rows='10' cols='60' placeholder="About yourself" spellcheck="false" id="grup-about" required></textarea>
+           </div>
+
+           <div class="submit">
+             <button>Submit</button>
+           </div>
+
+
+           </div>
+          
+         </div>
+         </div>
+        
+        </div>
+
+
+
+   <!--Trip Stories-->
+   
+   <div class="progress2">
+
+     <!--navbar explore -->
+    <div class="row-wallet">
+        <h1 class="icon-followers"><i class= 'fa-solid fa-window-restore 'id="icon-wallets"></i>Explore Trip Stories</h1>
+    </div>
+    <div class="card-trip">
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="img/Trip-Baturrade1.jpg" alt="" class="img-trip">
+                <!-- Tambahkan gambar lain sesuai kebutuhan -->
+            </div>
+        </div>
+
+            <!-- Box pembayaran tiket wisata raya baturraden -->
+        <div class="change-color">
+             <div class="box-trip" id="box-trip1">
+
+            <div class="row-boxTrip">
+                <h1 class="user">Today</h1>
+                <h1 class="social">Yesterday</h1>
+                <h1 class="security">Tomorrow</h1>
+                <h1 class="security">Select Date</h1>
+                <h1 class="remove">x</h1>
+            </div>
+            
+            <div class="BoxTrip-about">
+                
+                <h1>Baturraden Raya</h1>
+                <p><i class="fa-solid fa-ticket"></i>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p><i class="fa-solid fa-flag"></i>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p><i class="fa-solid fa-book"></i>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<p>
+
+            </div>
+
+            <div class="BuyTicket">
+                <p>Adult <span>(13age or above)</span></p>
+                <div class="item-price">
+                    <span>Rp.20.000</span> &times;
+                    <button id="remove">&minus;</button>
+                    <span id="quantity">1</span>
+                    <button id="add">&plus;</button> &equals;
+                    <span id="price">Rp20.000</span>
+                </div> <br>
+                
+                <p>Children <span>(Ages 2-12)</span></p>
+                <div class="item-price">
+                    <span>Rp.20.000</span> &times;
+                    <button id="remove1">&minus;</button>
+                    <span id="quantity1">1</span>
+                    <button id="add1">&plus;</button> &equals;
+                    <span id="price1">Rp20.000</span>
+                </div>
+
+                <div class="Button-trip">
+                    <button>Select</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+            <!-- Box pembayaran tiket wisata baturraden -->
+        <div class="change-color1">
+             <div class="box-trip" id="box-trip2">
+
+            <div class="row-boxTrip1">
+                <h1 class="user">Today</h1>
+                <h1 class="social">Yesterday</h1>
+                <h1 class="security">Tomorrow</h1>
+                <h1 class="security">Select Date</h1>
+                <h1 class="hapus">x</h1>
+            </div>
+            
+            <div class="BoxTrip-about1">
+                
+                <h1>Baturraden</h1>
+                <p><i class="fa-solid fa-ticket"></i>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p><i class="fa-solid fa-flag"></i>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p><i class="fa-solid fa-book"></i>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<p>
+
+            </div>
+
+            <div class="BuyTicket1">
+                <p>Adult <span>(13age or above)</span></p>
+                <div class="item-price">
+                    <span>Rp.20.000</span> &times;
+                    <button id="remove2">&minus;</button>
+                    <span id="quantity2">1</span>
+                    <button id="add2">&plus;</button> &equals;
+                    <span id="price2">Rp20.000</span>
+                </div> <br>
+                
+                <p>Children <span>(Ages 2-12)</span></p>
+                <div class="item-price">
+                    <span>Rp.20.000</span> &times;
+                    <button id="remove12">&minus;</button>
+                    <span id="quantity12">1</span>
+                    <button id="add12">&plus;</button> &equals;
+                    <span id="price12">Rp20.000</span>
+                </div>
+
+                <div class="Button-trip1">
+                    <button>Select</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+          
+           <!--trip detail-->
+        <div class="trip-details">
+            <h1>Kebun Raya Baturraden</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, possimus iusto? Esse quidem neque sapiente et repellendus vel placeat tempore nihil culpa? Facilis iure enim eligendi fugit neque, delectus doloremque.</p>
+            <div class="days-price">
+                <div class="days">
+                    <p><i class="fa-regular fa-clock"></i> 1 Days</p>
+                </div>
+                <div class="price">
+                    <p> Rp.20000</p>
+                </div>
+
+            </div>
+
+            <div class="submit-trip">
+                <button>View Trip</button>
+              </div>
+
+        </div>
+    </div>
+
+    <div class="card-trip">
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="img/baturraden.jpeg" alt="" class="img-trip">
+                <!-- Tambahkan gambar lain sesuai kebutuhan -->
+            </div>
+        </div>
+        <div class="trip-details">
+            <h1>Baturraden</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, possimus iusto? Esse quidem neque sapiente et repellendus vel placeat tempore nihil culpa? Facilis iure enim eligendi fugit neque, delectus doloremque.</p>
+            <div class="days-price">
+                <div class="days">
+                    <p><i class="fa-regular fa-clock"></i> 1 Days</p>
+                </div>
+                <div class="price">
+                    <p> Rp.20000</p>
+                </div>
+            </div>
+
+            <div class="submit-trip1">
+                <button>View Trip</button>
+              </div>
+
+        </div>
+    </div>
+
+    <div class="card-trip">
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="img/Trip-Baturrade1.jpg" alt="" class="img-trip">
+                <!-- Tambahkan gambar lain sesuai kebutuhan -->
+            </div>
+        </div>
+        <div class="trip-details">
+            <h1>Kebun Raya Baturraden</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, possimus iusto? Esse quidem neque sapiente et repellendus vel placeat tempore nihil culpa? Facilis iure enim eligendi fugit neque, delectus doloremque.</p>
+            <div class="days-price">
+                <div class="days">
+                    <p><i class="fa-regular fa-clock"></i> 1 Days</p>
+                </div>
+                <div class="price">
+                    <p> Rp.20000</p>
+                </div>
+
+            </div>
+
+            <div class="submit-trip">
+                <button>View Trip</button>
+              </div>
+
+        </div>
+    </div>
+
+
+      <!--Slide berikutnya -->
+  <div class="new-slide">
+    
+     <!--trip detail-->
+    <div class="card-trip">
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="img/Trip-Baturrade1.jpg" alt="" class="img-trip">
+                <!-- Tambahkan gambar lain sesuai kebutuhan -->
+            </div>
+        </div>
+        <div class="trip-details">
+            <h1>Kebun Raya Baturraden</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, possimus iusto? Esse quidem neque sapiente et repellendus vel placeat tempore nihil culpa? Facilis iure enim eligendi fugit neque, delectus doloremque.</p>
+            <div class="days-price">
+                <div class="days">
+                    <p><i class="fa-regular fa-clock"></i> 1 Days</p>
+                </div>
+                <div class="price">
+                    <p> Rp.20000</p>
+                </div>
+
+            </div>
+
+            <div class="submit-trip">
+                <button>View Trip</button>
+              </div>
+
+        </div>
+    </div>
+
+    <div class="card-trip">
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="img/Trip-Baturrade1.jpg" alt="" class="img-trip">
+                <!-- Tambahkan gambar lain sesuai kebutuhan -->
+            </div>
+        </div>
+        <div class="trip-details">
+            <h1>Kebun Raya Baturraden</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, possimus iusto? Esse quidem neque sapiente et repellendus vel placeat tempore nihil culpa? Facilis iure enim eligendi fugit neque, delectus doloremque.</p>
+            <div class="days-price">
+                <div class="days">
+                    <p><i class="fa-regular fa-clock"></i> 1 Days</p>
+                </div>
+                <div class="price">
+                    <p> Rp.20000</p>
+                </div>
+
+            </div>
+
+            <div class="submit-trip">
+                <button>View Trip</button>
+              </div> 
+
+        </div>
+    </div>
+
+    <div class="card-trip">
+        <div class="img-gallery">
+            <div class="img-container">
+                <img src="img/Trip-Baturrade1.jpg" alt="" class="img-trip">
+                <!-- Tambahkan gambar lain sesuai kebutuhan -->
+            </div>
+        </div>
+        <div class="trip-details">
+            <h1>Kebun Raya Baturraden</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, possimus iusto? Esse quidem neque sapiente et repellendus vel placeat tempore nihil culpa? Facilis iure enim eligendi fugit neque, delectus doloremque.</p>
+            <div class="days-price">
+                <div class="days">
+                    <p><i class="fa-regular fa-clock"></i> 1 Days</p>
+                </div>
+                <div class="price">
+                    <p> Rp.20000</p>
+                </div>
+                  
+            </div>
+
+            <div class="submit-trip">
+                <button>View Trip</button>
+              </div>
+
+
+        
+              
+        </div>
+    </div>
+  </div>
+   
+
+        <div class="load-more">
+            <button>Load More</button>
+        </div>
+
+           <!--Box trip-->
+</div>
+
+
+          <!-- Community -->
+        <div class="progress3">
+
+                <!--navbar follower and following -->
+            <div class="row-follow">
+                <h1 class="icon-followers" id="icon-followers"><i class="fa-regular fa-user" id="icon-face"></i>Followers</h1>
+                
+                <h1 class="icon-following"><i class="fa-regular fa-user" id="icon-face"></i>Following</h1>
+            </div>
+
+                <!-- followers -->
+            <div class="row-card">
+                <div class="card">
+                  <img src="img/Dzakwan portofolio 1.png" class="card-follow">
+                  <h1 class="nama">Dzakwan Al iman1</h1>
+                  <h2 class="kategori">Travele</h2>
+
+                  <div class="close">
+                    <button class="delete-remove">Remove</button>
+                  </div>
+                
+                </div> 
+
+                <div class="card">
+                  <img src="img/Dzakwan portofolio 1.png" class="card-follow">
+                  <h1 class="nama">Dzakwan Al iman2</h1>
+                  <h2 class="kategori">Travele</h2>
+
+                  <div class="close">
+                     <button class="delete-remove">Remove</button>
+                  </div>
+                
+                </div> 
+
+                <div class="card">
+                  <img src="img/Dzakwan portofolio 1.png" class="card-follow">
+                  <h1 class="nama">Dzakwan Al iman3</h1>
+                  <h2 class="kategori">Travele</h2>
+
+                  <div class="close">
+                    <button class="delete-remove">Remove</button>
+                  </div>
+                 
+                </div> 
+              
+                <div class="new-slide1">
+                    <div class="card">
+                        <img src="img/Dzakwan portofolio 1.png" class="card-follow">
+                        <h1 class="nama">Dzakwan Al iman1</h1>
+                        <h2 class="kategori">Travele</h2>
+      
+                        <div class="close">
+                          <button class="delete-remove">Remove</button>
+                        </div>
+                      
+                      </div> 
+      
+                      <div class="card">
+                        <img src="img/Dzakwan portofolio 1.png" class="card-follow">
+                        <h1 class="nama">Dzakwan Al iman2</h1>
+                        <h2 class="kategori">Travele</h2>
+      
+                        <div class="close">
+                           <button class="delete-remove">Remove</button>
+                        </div>
+                      
+                      </div> 
+      
+                      <div class="card">
+                        <img src="img/Dzakwan portofolio 1.png" class="card-follow">
+                        <h1 class="nama">Dzakwan Al iman3</h1>
+                        <h2 class="kategori">Travele</h2>
+      
+                        <div class="close">
+                          <button class="delete-remove">Remove</button>
+                        </div>
+      
+                      
+                      </div> 
+                </div>
+                
+  
+
+                <div class="load-more1">
+                    <button>Load More</button>
+                </div>
+            
+            </div>
+
+           
+
+                <!-- following -->
+                <div class="row-card1">
+                    <div class="card">
+                      <img src="img/Dzakwan portofolio 1.png" class="card-follow">
+                      <h1 class="nama">Dzakwan Al iman1</h1>
+                      <h2 class="kategori">Travele</h2>
+    
+                      <div class="close2">
+                        <button>Unfollowing</button>
+                      </div>
+                    
+                    </div> 
+    
+                    <div class="card">
+                      <img src="img/Dzakwan portofolio 1.png" class="card-follow">
+                      <h1 class="nama">Dzakwan Al iman2</h1>
+                      <h2 class="kategori">Travele</h2>
+    
+                      <div class="close1">
+                         <button>Following</button>
+                      </div>
+                    
+                    </div> 
+    
+                    <div class="card">
+                      <img src="img/Dzakwan portofolio 1.png" class="card-follow">
+                      <h1 class="nama">Dzakwan Al iman3</h1>
+                      <h2 class="kategori">Travele</h2>
+    
+                      <div class="close1">
+                        <button>Following</button>
+                      </div>
+                     
+                    </div> 
+                  
+                    <div class="new-slide2">
+                        <div class="card">
+                            <img src="img/Dzakwan portofolio 1.png" class="card-follow">
+                            <h1 class="nama">Dzakwan Al iman1</h1>
+                            <h2 class="kategori">Travele</h2>
+          
+                            <div class="close1">
+                              <button>Following</button>
+                            </div>
+                          
+                          </div> 
+          
+                          <div class="card">
+                            <img src="img/Dzakwan portofolio 1.png" class="card-follow">
+                            <h1 class="nama">Dzakwan Al iman2</h1>
+                            <h2 class="kategori">Travele</h2>
+          
+                            <div class="close1">
+                               <button>Following</button>
+                            </div>
+                          
+                          </div> 
+          
+                          <div class="card">
+                            <img src="img/Dzakwan portofolio 1.png" class="card-follow">
+                            <h1 class="nama">Dzakwan Al iman3</h1>
+                            <h2 class="kategori">Travele</h2>
+          
+                            <div class="close1">
+                              <button>Following</button>
+                            </div>
+          
+                          </div> 
+
+                    </div>
+                    
+             
+                    
+                
+                </div>
+
+
+        
+    
+        </div>
+
+         <!--wallets-->
+        <div class="progress4">
+
+               <!--navbar wallet -->
+            <div class="row-wallet">
+                <h1 class="icon-followers"><i class="fa-solid fa-wallet" id="icon-wallets"></i>Wallet</h1>
+            </div>
+                
+              <!--Tempat your money -->
+            <div class="money">
+                <h2>Main Balance</h2>
+                 <h3>Rp.<span>1000.000</span></h3>
+            </div>
+
+            <div class="ket-money">
+                <p>Additinal funds available in my other loyalty programmers</p>
+            </div>
+                   <!--payment bank-->
+            <div class="payment-part1">
+
+                <div class="payment1">
+                    <img src="img/payment1-removebg-preview.png" alt="">
+                    <i class="fa-regular fa-circle wallet_circle1"></i>
+                    <h3><span>Visa </span>Card</h3>
+                    <p>Convert Point to my wallet</p>
+                </div>
+                
+                
+                <div class="payment1">
+                    <img src="img/payment2-removebg-preview.png" alt="">
+                    <i class="fa-regular fa-circle wallet_circle2"></i>
+                    <h3><span>Skrill</span>Card</h3>
+                    <p>Convert Point to my wallet</p>
+                </div>
+
+                <div class="payment1">
+                    <img src="img/payment3-removebg-preview.png" alt="">
+                    <i class="fa-regular fa-circle wallet_circle3"></i>
+                    <h3><span>Master</span>Card</h3>
+                    <p>Convert Point to my wallet</p>
+                </div>
+
+            </div>
+
+            <div class="payment-part2">
+
+                <div class="payment1">
+                    <img src="img/payment4-removebg-preview.png" alt="">
+                    <i class="fa-regular fa-circle wallet_circle4"></i>
+                    <h3><span>Gopay </span>Card</h3>
+                    <p>Convert Point to my wallet</p>
+                </div>
+                
+                
+                <div class="payment1">
+                    <img src="img/payment5-removebg-preview.png" alt="">
+                    <i class="fa-regular fa-circle wallet_circle5"></i>
+                    <h3><span>BSI </span>Card</h3>
+                    <p>Convert Point to my wallet</p>
+                </div>
+
+                <div class="payment1">
+                    <img src="img/payment7.png" alt="">
+                    <i class="fa-regular fa-circle wallet_circle6"></i>
+                    <h3><span>Visa </span>Card</h3>
+                    <p>Convert Point to my wallet</p>
+                </div>
+               
+            </div>
+
+        </div>
+               
+         <!--Chat fitur-->
+        <div class="progress5">
+              
+                
+         <!--navbar chat -->
+            <div class="row-messages">
+                <h1 class="icon-followers"><i class= "fa-solid fa-message" id="icon-wallets"></i>Chat</h1>
+            </div>
+         
+
+               
+         <!--Account online-->
+            <div class="account">
+                <h1>Active now</h1>
+          
+                 
+                <a id="arrow-left-circle"><i data-feather="arrow-left-circle"></i></a>
+
+                <div class="account-user">
+  
+                  <img src="img/Dzakwan portofolio 1.png" alt="" class="img-user"><img src="img/online logo.png" alt="" class="logo-user">
+                  <img src="img/Dzakwan portofolio 1.png" alt="" class="img-user"><img src="img/online logo.png" alt="" class="logo-user">
+                  <img src="img/Dzakwan portofolio 1.png" alt="" class="img-user"><img src="img/online logo.png" alt="" class="logo-user">
+                  <img src="img/Dzakwan portofolio 1.png" alt="" class="img-user"><img src="img/online logo.png" alt="" class="logo-user">
+  
+                  <img src="img/Dzakwan portofolio 1.png" alt="" class="img-user"><img src="img/online logo.png" alt="" class="logo-user">
+                  <img src="img/Dzakwan portofolio 1.png" alt="" class="img-user"><img src="img/online logo.png" alt="" class="logo-user">
+                  <img src="img/Dzakwan portofolio 1.png" alt="" class="img-user"><img src="img/online logo.png" alt="" class="logo-user">
+                  <img src="img/Dzakwan portofolio 1.png" alt="" class="img-user"><img src="img/online logo.png" alt="" class="logo-user">
+  
+              
+                </div> 
+
+                <a id="arrow-right-circle"><i data-feather="arrow-right-circle"></i></a>
+
+            
+                <div class="search1">
+                    <input type="text" placeholder="search" spellcheck="false">
+                    <button><img src="img/search.png" alt=""></button>
+                </div>
+          
+                 
+         <!--Daftar account aktif-->
+            <div class="row-account">
+             
+                <div class="card-user">
+                        <img src="img/Dzakwan portofolio 1.png" alt="" class="pp-user">
+                        <p>Dzakwan</p><img src="img/online logo.png" alt="" class="logo-user2">
+                </div>
+
+                <div class="card-user">
+                        <img src="img/Dzakwan portofolio 1.png" alt="" class="pp-user">
+                        <p>Dzakwan</p><img src="img/online logo.png" alt="" class="logo-user2">
+                </div>
+
+                <div class="card-user">
+                        <img src="img/Dzakwan portofolio 1.png" alt="" class="pp-user">
+                        <p>Dzakwan</p><img src="img/online logo.png" alt="" class="logo-user2">
+                </div>
+
+                <div class="card-user">
+                        <img src="img/Dzakwan portofolio 1.png" alt="" class="pp-user">
+                        <p>Dzakwan</p><img src="img/online logo.png" alt="" class="logo-user2">
+                </div>
+                <div class="card-user">
+                        <img src="img/Dzakwan portofolio 1.png" alt="" class="pp-user">
+                        <p>Dzakwan</p><img src="img/online logo.png" alt="" class="logo-user2">
+                </div>
+             
+            </div>
+
+          
+           
+  
+                
+         <!--chat-->
+            <div class="chat-area">
+
+                 <div class="iconChat-area">
+                    <img src="img/Dzakwan portofolio 1.png" alt="">
+            
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <i class="fa-solid fa-video"></i>
+                    <i class="fa-solid fa-bell"></i>
+                 
+                 </div>
+
+                 <div class="chat-comment">
+
+                    <ul id="ListChat">
+                    
+                    </ul>
+
+                
+                 </div>
+                    
+                    <div class="type-chat">
+
+                        <i class="fa-regular fa-face-smile smile"></i>
+
+                        <input type="text" id="input-box"
+                        placeholder="Add text">
+                      
+                      <input type="file" id="fileInput1">
+                      <i class="fa-solid fa-link iconLink" id="chooseBtn1"></i>
+                      <i class="fa-regular fa-paper-plane iconSend"></i>
+
+                    </div>
+            
+
+            </div>
+
+
+    
+        </div>
+    
+    </div>
+
+
+
+</div>
+
+    <script>
+        feather.replace()
+    </script>
+
+<script src="admin.js"></script>
+</body>
+</html>
