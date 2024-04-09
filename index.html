@@ -43,7 +43,7 @@
             <button class="dark"><i class="fa-regular fa-moon" id="moon"></i><kbd class="text-dark">Dark</kbd></button>
             <i class="fa-solid fa-bell"></i>
             <i class="fa-solid fa-store store" id="Store"></i>
-            <div class="bulat">1</div>
+            <div class="bulat"></div>
             <img src="img/Dzakwan portofolio 1.png" alt="" class="profile" id="mainProfile">
         </div>
 
@@ -79,7 +79,7 @@
             <!--Forum checkout-->
             <div class="form-container">
 
-                <form action="" id="checkoutForum">
+                <form action="" id="checkoutForm">
                   <h5>Customer Detail</h5>
           
                  <label for="name">
@@ -98,7 +98,7 @@
                   <input type="number" name="phone" id="phone"></input>
                  </label>
           
-                 <button class="checkout-button" type="submit" id="checkout-button" value="checkout">Checkout</button>
+                 <button class="checkout-button disabled" type="submit" id="checkout-button" value="checkout">Checkout</button>
                  
                 </form>
             </div>
@@ -313,6 +313,11 @@
                 <div class="Button-trip">
                     <button>Select</button>
                   </div>
+
+                <div class="Button-trip error">
+                    <button>Selected</button>
+                  </div>
+                  
             </div>
         </div>
     </div>
@@ -359,6 +364,10 @@
 
                 <div class="Button-trip1">
                     <button>Select</button>
+                  </div>
+
+                  <div class="Button-trip1 error">
+                    <button>Selected</button>
                   </div>
             </div>
         </div>

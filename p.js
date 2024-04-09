@@ -264,76 +264,43 @@ const kurang12 = document.getElementById('remove12');
 const harga12 = document.getElementById('price12');
 const jumlahTiket12 = document.getElementById('quantity12');
 
-var i = 1;
-var x = 1;
-var price = 20000;
-var price1 = 20000;
-tambah.addEventListener('click', function () {
-  jumlahTiket.innerHTML = ++i;
-  const total = i * price;
-  harga.innerHTML = 'Rp' + total;
-});
-
-kurang.addEventListener('click', function () {
-  if (i >= 1) {
-    jumlahTiket.innerHTML = --i;
-    const total = i * price;
-    harga.innerHTML = 'Rp' + total;
-  }
-});
-
-tambah1.addEventListener('click', function () {
-  jumlahTiket1.innerHTML = ++x;
-  const total = x * price1;
-  harga1.innerHTML = 'Rp' + total;
-});
-
-kurang1.addEventListener('click', function () {
-  if (x >= 1) {
-    jumlahTiket1.innerHTML = --x;
-    const total = x * price;
-    harga1.innerHTML = 'Rp' + total;
-  }
-});
-
-
-tambah2.addEventListener('click', function () {
-  jumlahTiket2.innerHTML = ++i;
-  const total = i * price;
-  harga2.innerHTML = 'Rp' + total;
-});
-
-kurang2.addEventListener('click', function () {
-  if (i >= 1) {
-    jumlahTiket2.innerHTML = --i;
-    const total = i * price;
-    harga2.innerHTML = 'Rp' + total;
-  }
-});
-
-tambah12.addEventListener('click', function () {
-  jumlahTiket12.innerHTML = ++x;
-  const total = x * price1;
-  harga12.innerHTML = 'Rp' + total;
-});
-
-kurang12.addEventListener('click', function () {
-  if (x >= 1) {
-    jumlahTiket12.innerHTML = --x;
-    const total = x * price;
-    harga12.innerHTML = 'Rp' + total;
-  }
-});
 //Untuk membuat jumlah total yang akan dimunculkan di box
 const all = document.querySelector('.all');
 const all1 = document.querySelector('.all1');
+const itemPrice = document.querySelector('.item-price')
 
 
-const total = i * price;
-const k = harga.innerHTML = 'Rp' + total;
+var price1 = 20000;
 
-const total1 = x * price1;
-const k1 = harga1.innerHTML = 'Rp' + total;
+//Object untuk memunculkan jumlah total di box keranjang
+  const objTotal = () => {
+     item = 0,
+     price = 20000,
+     quantity = 0,
+     semua = 0
+         
+     tambah.addEventListener('click', function () {
+        jumlahTiket.innerHTML = ++item;
+        const total = item * price;
+        harga.innerHTML = 'Rp' + total;
+      });
+      
+      kurang.addEventListener('click', function () {
+        if (item >= 1) {
+          jumlahTiket.innerHTML = --item;
+          const total = item * price;
+          harga.innerHTML = 'Rp' + total;
+        }
+      });
+      
+    
+  }
+
+  itemPrice.addEventListener('click',
+    objTotal
+  );
+
+
 
 
 
@@ -376,23 +343,15 @@ const logout = document.querySelector('.logout');
 const select1 = document.querySelector('.Button-trip1');
 const vacation1 = document.querySelector('.vacation-item1');
 const logout1 = document.querySelector('.logout1');
-
 const bulat = document.querySelector('.bulat');
+
 const kosong = document.querySelector('.kosong');
 const forumcheckout = document.querySelector('.form-container');
 
 
-//jika select dipencet,maka box trip nya akan masuk ke box
-var n = 0
 select.addEventListener('click', function () {
   vacation.style.display = 'block';
   bulat.style.display = 'block';
-
-  bulat.innerHTML = ++n;
-  if(n <= 2){
-    select.style.display = 'none'
-  }
-
   kosong.style.display = 'none';
   forumcheckout.style.display = 'block';
   all.innerHTML = 'total:' + k+k1
@@ -401,67 +360,25 @@ select.addEventListener('click', function () {
 //jika x dipencet,maka box trip nya akan keapus
 logout.addEventListener('click', function (e) {
   vacation.style.display = 'none';
-  bulat.innerHTML = --n;
-
-  if(n == 0){
-    bulat.style.display = 'none'
-    kosong.style.display = 'block';
-    forumcheckout.style.display = 'none';
-  } 
-
-  select.style.display = 'block'
- 
+  bulat.style.display = 'none';
+  kosong.style.display = 'block';
+  forumcheckout.style.display = 'none';
 });
 
-//jika select dipencet,maka box trip nya akan masuk ke box
 select1.addEventListener('click', function () {
   vacation1.style.display = 'block';
   bulat.style.display = 'block';
-  bulat.innerHTML = ++n;
-
-  if(n <= 2){
-    select1.style.display = 'none'
-  }
-
   kosong.style.display = 'none';
   forumcheckout.style.display = 'block';
 });
 //jika x dipencet,maka box trip nya akan keapus
 logout1.addEventListener('click', function () {
   vacation1.style.display = 'none';
-  bulat.innerHTML = --n;
-  
-  if(n == 0){
-    bulat.style.display = 'none'
-    kosong.style.display = 'block';
-    forumcheckout.style.display = 'none';
-  }
-
-  select1.style.display = 'block'
+  bulat.style.display = 'none';
+  kosong.style.display = 'block';
+  forumcheckout.style.display = 'none';
 });
 
-//jika form ga di isi maka checkout ga bisa dipencet, harus diiisi semua baru bisa diklik
-const checkoutButton = document.querySelector('.checkout-button')
-
-checkoutButton.disabled = true
-
-const form = document.querySelector('#checkoutForm')
-
-form.addEventListener('keyup', function(){
-   for(let i = 0; i < form.elements.length; i++){
-    if(form.elements[i].value.length !== 0){
-      checkoutButton.classList.remove('disabled')
-      checkoutButton.classList.add('disabled')
-    } else{
-       return false
-    }
-     
-   }
-   
-   checkoutButton.disabled = false
-   checkoutButton.classList.remove('disabled')
-
-})
 
 //button setting general item
 iconFace.addEventListener('click', function () {
@@ -674,7 +591,7 @@ inputBox.addEventListener('keydown', function (enter) {
     enter.preventDefault();
     addChat();
   }
-});        
+});
 
 iconSend.addEventListener('click', function () {
   addChat();

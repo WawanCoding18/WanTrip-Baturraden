@@ -286,6 +286,12 @@ body {
   cursor: pointer;
 }
 
+.form-container .checkout-button.disabled{
+  background-color: rgb(139, 135, 133);
+  color: white;
+  cursor: not-allowed;
+}
+
 
 .Dashboard {
   background-color: rgb(255, 255, 255);
@@ -758,6 +764,7 @@ li {
   width: 150px;
   font-size: 20px;
 }
+
 
 .Button-trip button:hover,
 .Button-trip1 button:hover {
