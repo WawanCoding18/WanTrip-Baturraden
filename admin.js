@@ -264,76 +264,85 @@ const kurang12 = document.getElementById('remove12');
 const harga12 = document.getElementById('price12');
 const jumlahTiket12 = document.getElementById('quantity12');
 
-var i = 1;
-var x = 1;
-var price = 20000;
-var price1 = 20000;
-tambah.addEventListener('click', function () {
-  jumlahTiket.innerHTML = ++i;
-  const total = i * price;
-  harga.innerHTML = 'Rp' + total;
+function handleTicket(quantityElem, priceElem, increment, isAdult) {
+  let quantity = parseInt(quantityElem.textContent);
+  const adultPrice = 20000;
+  const childPrice = 15000;
+
+  quantity += increment;
+  if (quantity < 0) quantity = 0;
+
+  quantityElem.textContent = quantity;
+
+  const adultTotalPrice = quantity * adultPrice;
+  const childTotalPrice = quantity * childPrice;
+  const total = adultTotalPrice + childTotalPrice;
+
+  priceElem.textContent = 'Rp' + (isAdult ? adultTotalPrice : childTotalPrice).toLocaleString();
+  ji.innerHTML = 'Total: Rp' + total.toLocaleString();
+}
+function handleTicket1(quantityElem, priceElem, increment, isAdult) {
+  let quantity = parseInt(quantityElem.textContent);
+  const adultPrice = 20000;
+  const childPrice = 15000;
+
+  quantity += increment;
+  if (quantity < 0) quantity = 0;
+
+  quantityElem.textContent = quantity;
+
+  const adultTotalPrice = quantity * adultPrice;
+  const childTotalPrice = quantity * childPrice;
+  const total = adultTotalPrice + childTotalPrice;
+
+  priceElem.textContent = 'Rp' + (isAdult ? adultTotalPrice : childTotalPrice).toLocaleString();
+  ji1.innerHTML = 'Total: Rp' + total.toLocaleString();
+}
+
+
+// Event listeners for adult tickets
+document.getElementById('add').addEventListener('click', function() {
+  handleTicket(document.getElementById('quantity'), document.getElementById('price'), 1, true);
 });
 
-kurang.addEventListener('click', function () {
-  if (i >= 1) {
-    jumlahTiket.innerHTML = --i;
-    const total = i * price;
-    harga.innerHTML = 'Rp' + total;
-  }
+document.getElementById('remove').addEventListener('click', function() {
+  handleTicket(document.getElementById('quantity'), document.getElementById('price'), -1, true);
 });
 
-tambah1.addEventListener('click', function () {
-  jumlahTiket1.innerHTML = ++x;
-  const total = x * price1;
-  harga1.innerHTML = 'Rp' + total;
+// Event listeners for children tickets
+document.getElementById('add1').addEventListener('click', function() {
+  handleTicket(document.getElementById('quantity1'), document.getElementById('price1'), 1, false);
 });
 
-kurang1.addEventListener('click', function () {
-  if (x >= 1) {
-    jumlahTiket1.innerHTML = --x;
-    const total = x * price;
-    harga1.innerHTML = 'Rp' + total;
-  }
+document.getElementById('remove1').addEventListener('click', function() {
+  handleTicket(document.getElementById('quantity1'), document.getElementById('price1'), -1, false);
 });
 
 
-tambah2.addEventListener('click', function () {
-  jumlahTiket2.innerHTML = ++i;
-  const total = i * price;
-  harga2.innerHTML = 'Rp' + total;
+
+// Event listeners for children tickets
+document.getElementById('add2').addEventListener('click', function() {
+  handleTicket1(document.getElementById('quantity2'), document.getElementById('price2'), 1);
 });
 
-kurang2.addEventListener('click', function () {
-  if (i >= 1) {
-    jumlahTiket2.innerHTML = --i;
-    const total = i * price;
-    harga2.innerHTML = 'Rp' + total;
-  }
+document.getElementById('remove2').addEventListener('click', function() {
+  handleTicket1(document.getElementById('quantity2'), document.getElementById('price2'), -1);
+
+
+});
+// Event listeners for children tickets
+document.getElementById('add12').addEventListener('click', function() {
+  handleTicket1(document.getElementById('quantity12'), document.getElementById('price12'), 1);
 });
 
-tambah12.addEventListener('click', function () {
-  jumlahTiket12.innerHTML = ++x;
-  const total = x * price1;
-  harga12.innerHTML = 'Rp' + total;
-});
+document.getElementById('remove12').addEventListener('click', function() {
+  handleTicket1(document.getElementById('quantity12'), document.getElementById('price12'), -1);
 
-kurang12.addEventListener('click', function () {
-  if (x >= 1) {
-    jumlahTiket12.innerHTML = --x;
-    const total = x * price;
-    harga12.innerHTML = 'Rp' + total;
-  }
+
 });
 //Untuk membuat jumlah total yang akan dimunculkan di box
-const all = document.querySelector('.all');
-const all1 = document.querySelector('.all1');
-
-
-const total = i * price;
-const k = harga.innerHTML = 'Rp' + total;
-
-const total1 = x * price1;
-const k1 = harga1.innerHTML = 'Rp' + total;
+const ji = document.querySelector('.ji')
+const ji1 = document.querySelector('.ji1')
 
 
 
@@ -365,7 +374,7 @@ Store.addEventListener('click', function (event) {
   event.preventDefault();
   event.stopPropagation();
   toggleStore();
-  toggleTrip();
+  
 });
 
 //jika select dipencet,maka box trip nya akan masuk ke box
@@ -395,7 +404,6 @@ select.addEventListener('click', function () {
 
   kosong.style.display = 'none';
   forumcheckout.style.display = 'block';
-  all.innerHTML = 'total:' + k+k1
 
 });
 //jika x dipencet,maka box trip nya akan keapus
@@ -462,6 +470,26 @@ form.addEventListener('keyup', function(){
    checkoutButton.classList.remove('disabled')
 
 })
+
+//Format pesan Whattsap
+
+const formatMessage = (obj) => {
+  return `Data Customer
+    Nama: ${obj.name}, 
+    Email:  ${obj.email}, 
+    No HP:   ${obj.phone},
+    Data Pesanan: 
+    Terima kasih.`
+}
+
+checkoutButton.addEventListener('click', async function(e){
+  e.preventDefault();
+  const formData = new FormData(form);
+  const data = new URLSearchParams(formData);
+  const objData = Object.fromEntries(data);
+  const message = formatMessage(objData)
+  window.open('https://wa.me/6285876009918?text= '+ encodeURIComponent(message))
+ });
 
 //button setting general item
 iconFace.addEventListener('click', function () {

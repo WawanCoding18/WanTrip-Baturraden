@@ -1,0 +1,435 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: rgb(224, 217, 210);
+  }
+  
+  .navbar {
+    background-color: white;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo {
+    position: fixed;
+    right: 85%;
+    bottom: 76%;
+    padding: 0;
+  }
+  
+  .logo img.wantrip {
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* Aturan lain yang mungkin mempengaruhi ukuran elemen */
+  .logo img {
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: absolute;
+    left: 53%;
+  }
+  
+  .search input {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid orangered;
+  }
+  
+  .search button {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .search img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .icon {
+    margin-left: 70%;
+    margin-bottom: 20px;
+  }
+  
+  .icon .fa-solid {
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 40px;
+    border: 1px solid black;
+  }
+  
+  .profile {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    cursor: pointer;
+  }
+  
+  .dark {
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-right: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .text-dark {
+    text-align: center;
+    margin-left: 5px;
+    font-weight: 600;
+  }
+  
+  #moon {
+    border: 1px solid black;
+    background-color: rgb(220, 192, 101);
+    border-radius: 50%;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  .store {
+    color: black;
+    display: inline-block;
+  }
+  .store:hover {
+    color: orangered;
+    display: inline-block;
+  }
+  
+  .Dashboard {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    position: fixed;
+    margin-top: 8%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+  }
+  
+  ul {
+    padding-bottom: 170px;
+  }
+  
+  ul li {
+    list-style: none;
+    text-align: left;
+    font-size: 18px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    padding-left: 30px;
+    margin-top: 20px;
+  }
+  
+  li .fa-solid {
+    padding-right: 10px;
+  }
+  
+  h1 {
+    font-size: 20px;
+    cursor: default;
+    padding-left: 30px;
+    padding-bottom: 10px;
+  }
+  
+  li {
+    cursor: pointer;
+  }
+  
+  .orangemuda {
+    background-color: orangered;
+    color: white;
+    border-radius: 20px;
+  }
+  
+  .content {
+    background-color: rgb(255, 255, 255);
+    height: 520px;
+    width: 81%;
+    display: block;
+    margin-left: 17%;
+    margin-top: 8%;
+    border-radius: 30px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  .content::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .progress1 {
+    display: block;
+  }
+  
+  .row-profile {
+    display: flex;
+    flex-direction: row;
+    font-size: 50px;
+    padding-top: 20px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+  }
+  
+  .row-profile h1 {
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .row-profile h1:hover {
+    color: orangered;
+  }
+  
+  .row-profile h1:after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid orangered;
+    padding-bottom: 5px;
+    transition: 0.1s linear;
+    transform: scaleX(0);
+  }
+  
+  .row-profile h1:hover::after {
+    transform: scaleX(0.5);
+  }
+  
+  #icon-face,
+  #icon-social,
+  #icon-shield,
+  #icon-wallets {
+    margin-right: 5px;
+  }
+  
+  .img-profile {
+    border-radius: 50%;
+    border: 3px solid orangered;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+  }
+  
+  .profile1 {
+    margin-right: 70%;
+  }
+  
+  #fileInput {
+    margin-right: 20px;
+    display: none;
+  }
+  
+  #chooseBtn {
+    background-color: orangered;
+    border-radius: 50%;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+  
+  .camera {
+    margin-right: 60%;
+    margin-top: -50px;
+  }
+  
+  .form-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+  
+  .row-email {
+    position: fixed;
+    top: 30%;
+    left: 40%;
+  }
+  
+  .grup input {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 20px;
+    width: 600px;
+  }
+  .grup textarea {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 20px;
+    width: 600px;
+    overflow-y: hidden;
+  }
+  
+  #grup-about {
+    height: 100px;
+    padding-bottom: 60px;
+  }
+  
+  .submit button {
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 20px;
+    color: white;
+    padding: 15px;
+    margin-left: 30px;
+    bottom: 8px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .social-progress {
+    display: none;
+  }
+  
+  .social-progress h1,
+  .shield-progress h1 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  #social-link,
+  #shield-link {
+    margin-right: 10px;
+    color: orangered;
+  }
+  
+  .social-progress .grup,
+  .shield-progress .grup {
+    margin-left: 24%;
+    margin-top: 30px;
+  }
+  
+  .submit-social button {
+    margin-top: 5px;
+    margin-left: 25%;
+    cursor: pointer;
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 20px;
+    color: white;
+    padding: 15px;
+  }
+  
+  .shield-progress {
+    display: none;
+    font-size: 20px;
+  }
+  
+  .shield-progress .authentication {
+    font-size: 13px;
+    text-align: left;
+    margin-left: 250px;
+    margin-top: 20px;
+  }
+  
+  .submit-shield button {
+    margin-top: 10px;
+    margin-left: 25%;
+    cursor: pointer;
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 20px;
+    color: white;
+    padding: 15px;
+  }
+
+
+/* CSS utama Anda */
+
+/* Aturan untuk tampilan seluler */
+/* Aturan media queries untuk tampilan seluler */
+@media only screen and (max-width: 768px) {
+    .logo {
+      position: static;
+      margin: 20px auto;
+    }
+  
+    .search {
+      left: 50%;
+      transform: translateX(-50%);
+      position: relative;
+    }
+  
+    .icon {
+      margin: 20px auto;
+      text-align: center;
+    }
+  
+    .profile {
+      position: static;
+      margin: 20px auto;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 20px;
+      border-radius: 0;
+    }
+
+    /* Aturan media queries untuk tampilan seluler */
+  
+    ul li {
+      padding-left: 15px; /* Sesuaikan padding untuk tampilan seluler */
+      font-size: 16px; /* Sesuaikan ukuran font untuk tampilan seluler */
+    }
+  
+    h1 {
+      padding-left: 15px; /* Sesuaikan padding untuk tampilan seluler */
+      font-size: 18px; /* Sesuaikan ukuran font untuk tampilan seluler */
+    }
+  
+  }
+  

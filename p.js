@@ -268,37 +268,79 @@ const jumlahTiket12 = document.getElementById('quantity12');
 const all = document.querySelector('.all');
 const all1 = document.querySelector('.all1');
 const itemPrice = document.querySelector('.item-price')
+const ji = document.querySelector('.ji')
 
 
-var price1 = 20000;
+
 
 //Object untuk memunculkan jumlah total di box keranjang
-  const objTotal = () => {
-     item = 0,
-     price = 20000,
-     quantity = 0,
-     semua = 0
-         
-     tambah.addEventListener('click', function () {
-        jumlahTiket.innerHTML = ++item;
-        const total = item * price;
-        harga.innerHTML = 'Rp' + total;
-      });
-      
-      kurang.addEventListener('click', function () {
-        if (item >= 1) {
-          jumlahTiket.innerHTML = --item;
-          const total = item * price;
-          harga.innerHTML = 'Rp' + total;
-        }
-      });
-      
-    
-  }
+// Function to handle ticket quantity and price
+function handleTicket(quantityElem, priceElem, increment, isAdult) {
+  let quantity = parseInt(quantityElem.textContent);
+  const adultPrice = 20000;
+  const childPrice = 15000;
 
-  itemPrice.addEventListener('click',
-    objTotal
-  );
+  quantity += increment;
+  if (quantity < 0) quantity = 0;
+
+  quantityElem.textContent = quantity;
+
+  const adultTotalPrice = quantity * adultPrice;
+  const childTotalPrice = quantity * childPrice;
+  const total = adultTotalPrice + childTotalPrice;
+
+  priceElem.textContent = 'Rp' + (isAdult ? adultTotalPrice : childTotalPrice).toLocaleString();
+  ji.innerHTML = 'Total: Rp' + total.toLocaleString();
+}
+
+
+// Event listeners for adult tickets
+document.getElementById('add').addEventListener('click', function() {
+  handleTicket(document.getElementById('quantity'), document.getElementById('price'), 1, true);
+});
+
+document.getElementById('remove').addEventListener('click', function() {
+  handleTicket(document.getElementById('quantity'), document.getElementById('price'), -1, true);
+});
+
+// Event listeners for children tickets
+document.getElementById('add1').addEventListener('click', function() {
+  handleTicket(document.getElementById('quantity1'), document.getElementById('price1'), 1, false);
+});
+
+document.getElementById('remove1').addEventListener('click', function() {
+  handleTicket(document.getElementById('quantity1'), document.getElementById('price1'), -1, false);
+});
+
+
+
+// Event listeners for children tickets
+document.getElementById('add2').addEventListener('click', function() {
+  handleTicket(document.getElementById('quantity2'), document.getElementById('price2'), 1);
+});
+
+document.getElementById('remove2').addEventListener('click', function() {
+  handleTicket(document.getElementById('quantity2'), document.getElementById('price2'), -1);
+
+
+});
+// Event listeners for children tickets
+document.getElementById('add12').addEventListener('click', function() {
+  handleTicket(document.getElementById('quantity12'), document.getElementById('price12'), 1);
+});
+
+document.getElementById('remove12').addEventListener('click', function() {
+  handleTicket(document.getElementById('quantity12'), document.getElementById('price12'), -1);
+
+
+});
+
+
+
+
+
+      
+
 
 
 
@@ -354,7 +396,7 @@ select.addEventListener('click', function () {
   bulat.style.display = 'block';
   kosong.style.display = 'none';
   forumcheckout.style.display = 'block';
-  all.innerHTML = 'total:' + k+k1
+  all.innerHTML = 'total: '
 
 });
 //jika x dipencet,maka box trip nya akan keapus
@@ -370,6 +412,7 @@ select1.addEventListener('click', function () {
   bulat.style.display = 'block';
   kosong.style.display = 'none';
   forumcheckout.style.display = 'block';
+  all1 .innerHTML = 'total: '
 });
 //jika x dipencet,maka box trip nya akan keapus
 logout1.addEventListener('click', function () {
